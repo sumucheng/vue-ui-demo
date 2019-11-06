@@ -1,6 +1,6 @@
 {
-  "name": "vue-ui-demo",
-  "version": "1.0.0",
+  "name": "vue-ui-demo-ryoko",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
 
@@ -20,7 +20,7 @@
     "ui",
     "demo"
   ],
-  "author": "",
+  "author": "ryoko",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sumucheng/vue-ui-demo/issues"
