@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.0.1",
+    "chai": "^4.2.0",
     "sass": "^1.23.3",
     "vue-template-compiler": "^2.6.10"
   }
