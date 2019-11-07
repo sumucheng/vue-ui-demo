@@ -12,7 +12,7 @@
             box-sizing: border-box;
         }
 
-        :root {
+        html {
             --button-height: 32px;
             --font-size: 14px;
             --button-bg: white;
@@ -23,33 +23,52 @@
             --border-color-hover: #666;
         }
 
+        #app {
+            margin: 20px;
+        }
+
         body {
             font-size: var(--font-size);
         }
-
     </style>
     <style>
-
+        .box {
+            margin: 20px;
+        }
     </style>
-
 </head>
 <body>
 <div id="app">
-    <g-button :loading="loading1" @click="loading1=!loading1">
-        submit
-    </g-button>
-    <g-button icon="setting" :loading="loading2" @click="loading2=!loading2">
-        submit
-    </g-button>
-    <g-button icon="setting" icon-position="right" :loading="loading3" @click="loading3=!loading3">
-        submit
-    </g-button>
-    <g-button-group>
-        <g-button icon="left">上一页</g-button>
-        <g-button>更多</g-button>
-        <g-button icon="right" icon-position="right">下一页</g-button>
-    </g-button-group>
-    <div id="test"></div>
+    <div class="box">
+        <g-input value="输入" @change="inputChange"></g-input>
+        <g-input value="不可点击" disabled></g-input>
+        <g-input value="不可修改" readonly></g-input>
+        <g-input value="不少于五个字" error="不少于五个字"></g-input>
+    </div>
+    <div class="box">
+        <g-input value="输入" v-model="message"></g-input>
+        <p>{{message}}</p>
+        <button @click="message+=1">+1</button>
+    </div>
+    <div class="box">
+        <g-button :loading="loading1" @click="loading1=!loading1">
+            submit
+        </g-button>
+        <g-button icon="setting" :loading="loading2" @click="loading2=!loading2">
+            submit
+        </g-button>
+        <g-button icon="setting" icon-position="right" :loading="loading3" @click="loading3=!loading3">
+            submit
+        </g-button>
+    </div>
+    <div class="box">
+        <g-button-group>
+            <g-button icon="left">上一页</g-button>
+            <g-button>更多</g-button>
+            <g-button icon="right" icon-position="right">下一页</g-button>
+        </g-button-group>
+    </div>
+
 </div>
 <script src="src/app.js"></script>
 </body>
